@@ -18,4 +18,8 @@ public final class BuildInfoUtils {
     public static String getBuildVersion() {
         return SystemProperties.get(Constants.PROP_BUILD_VERSION);
     }
+
+    public static boolean isOfficialBuild() {
+        return SystemProperties.getBoolean(Constants.PROP_IS_OFFICIAL, false);
+    }
 }
