@@ -1,6 +1,6 @@
 #!/bin/sh
 
-updates_dir=/data/system_updates
+updates_dir=/data/avium_updates
 
 if [ ! -f "$1" ]; then
    echo "Usage: $0 ZIP [UNVERIFIED]"
@@ -53,8 +53,8 @@ adb shell chgrp cache "$zip_path_device"
 adb shell chmod 664 "$zip_path_device"
 
 # Kill the app before updating the database
-adb shell "killall net.pixelos.ota 2>/dev/null"
-adb shell "sqlite3 /data/data/net.pixelos.ota/databases/updates.db" \
+adb shell "killall org.avium.updater 2>/dev/null"
+adb shell "sqlite3 /data/data/org.avium.updater/databases/updates.db" \
     "\"INSERT INTO updates (status, path, download_id, timestamp, version, size)" \
     "  VALUES ($status, '$zip_path_device', '$id', $timestamp, '$version', $size)\""
 
