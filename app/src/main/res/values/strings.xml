@@ -28,8 +28,8 @@
       {version} - Build version
       {device} - Device name
     -->
-    <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/AviumUI-Devices/ota/avium-16.2/{device}/ota.json</string>
-    <string name="changelog_url" translatable="false">https://raw.githubusercontent.com/AviumUI-Devices/ota/avium-16.2/{device}/changelog.md</string>
+    <string name="updater_server_url" translatable="false">https://aviumui.org/api/ota/{device}/vanilla</string>
+    <string name="changelog_url" translatable="false">https://aviumui.org/api/ota/{device}/changelog</string>
 
     <string name="verification_failed_notification">Verification failed</string>
     <string name="verifying_download_notification">Verifying update</string>
