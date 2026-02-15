@@ -27,6 +27,7 @@ object Constants {
     const val PROP_AB_DEVICE: String = "ro.build.ab_update"
     const val PROP_BUILD_DATE: String = "ro.build.date.utc"
     const val PROP_BUILD_VERSION: String = "ro.avium.build.version"
+    const val PROP_GMS_STATUS: String = "ro.avium.gms_status"
     const val PROP_DEVICE: String = "ro.lineage.device"
     const val PREF_INSTALL_OLD_TIMESTAMP: String = "install_old_timestamp"
     const val PREF_INSTALL_NEW_TIMESTAMP: String = "install_new_timestamp"
