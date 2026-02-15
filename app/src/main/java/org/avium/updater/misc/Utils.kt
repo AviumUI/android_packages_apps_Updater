@@ -140,8 +140,17 @@ object Utils {
         val buildVersion: String = SystemProperties.get(Constants.PROP_BUILD_VERSION)
         val device: String = SystemProperties.get(Constants.PROP_DEVICE)
         val serverUrl: String = context.getString(R.string.updater_server_url)
+        val isGms: Boolean = SystemProperties.getBoolean(Constants.PROP_GMS_STATUS, false)
+        val flavor: String = if (isGms) {
+            "gms"
+        } else {
+            "vanilla"
+        }
 
-        return serverUrl.replace("{version}", buildVersion).replace("{device}", device)
+        return serverUrl
+            .replace("{version}", buildVersion)
+            .replace("{device}", device)
+            .replace("{flavor}", flavor)
     }
 
     @JvmStatic
